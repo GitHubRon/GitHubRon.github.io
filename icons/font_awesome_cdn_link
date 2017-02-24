@@ -1,0 +1,5 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+use class="fa fa-bars" in an inline element.
+
+or use unicode as element content and class="fa" such as <i style="font-size:24px" class="fa">&#xf082;</i> (facebook).

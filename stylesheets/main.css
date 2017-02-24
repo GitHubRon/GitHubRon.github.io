@@ -1,0 +1,77 @@
+body {
+    overflow-x: hidden; /* Eliminated the "mystery horizontal scroll bar" */
+    background: #220033;
+}
+
+.logobar {
+    min-height: 30px;
+    position: relative;
+}
+
+#logobar1 {
+    background-color: red;
+}
+
+#logobar2 {
+    background-color: white;
+}
+
+#logobar3 {
+    background-color: blue;
+}
+
+#myName {
+    font: bold 20px Arial;
+    line-height: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+/** START Clock Display ***********************************************************************************************/
+@font-face {
+    font-family: alarmclock;
+    src: url(../fonts/alarmclock.ttf);
+}
+
+#clockDisplay {
+    color: #00ff00;
+    display: inline-block;
+    font-family: alarmclock;
+    font-size: 1.9rem;
+    font-weight: bold;
+    /*margin-right: 20px;
+    position: relative;
+    left: 2px;*/
+}
+
+/*@media only screen and(max-width: 320px) {
+    #clockDisplay {
+        font-size: 15px;
+    }
+}*/
+
+
+#clockAdj {
+    color: white;
+    font-size: .9em;
+}
+
+#slider {
+    background-color: #666666;
+    display: inline-block;
+    height: .5em;
+    margin: auto;
+    width: 100%;
+}
+
+/** END Clock Display *************************************************************************************************/
+
+/** Bootstrap styles *************************************************************************************************/
+
+.commonDiv {
+	color: #ccddee;
+}
+
+.techList {
+	list-style-type: none; 
+}
