@@ -27,6 +27,7 @@ body {
     text-align: center;
 }
 
+
 /** START Clock Display ***********************************************************************************************/
 @font-face {
     font-family: alarmclock;
@@ -66,7 +67,7 @@ body {
 
 /** END Clock Display *************************************************************************************************/
 
-/** Bootstrap styles *************************************************************************************************/
+/** Override Bootstrap styles *************************************************************************************************/
 
 .commonDiv {
 	color: #ccddee;
@@ -74,4 +75,38 @@ body {
 
 .techList {
 	list-style-type: none; 
+}
+
+#resume {
+	background-color: white;
+}
+
+@media screen {
+		.printResume {
+		display: none;
+	}
+}
+
+/** Print resume ****************************/
+@media print {
+/*body > div.container >	div.row.printHide {
+		display: none;
+	}*/
+	.printHide {
+		display: none;
+	}
+
+	.printResume {
+		display: visible;
+	}
+
+	#resume {
+		font-size: 12pt; 
+		font-family: Garamond; 
+	}
+
+	.myName {
+		font-size: 16pt;
+	}
+
 }

@@ -27,12 +27,12 @@
 </head>
 
 <body>
-<div class="logobar" id="logobar1"></div>
-<div class="logobar" id="logobar2">
-  <div id="myName">Ronald M. Eicher II</div>
+<div class="logobar printHide" id="logobar1"></div>
+<div class="logobar printHide" id="logobar2">
+  <div id="myName" class="printHide">Ronald M. Eicher II</div>
 </div>
 <div class="logobar" id="logobar3"></div>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse" id="addedNav">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -46,30 +46,31 @@
       <ul class="nav navbar-nav navbar-left">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">Goals</a></li>
-        <li><a href="#">School Projects</a></li>
-        <li><a href="#">Outside Interests</a></li>
+        <li><a href="#">School Project</a></li>
+        <li><a href="#">R&eacutesum&eacute</a></li>
+        <li><a href="#">Site Details</a></li>
+        <li><a href="#">Hobbies</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container">
-  <div class="row">
-		<div class="col-md-2"> <!-- Begin clock adj -->
+<div class="container"><!--START Web page CONTAINER DIV-->
+	<div class="row printHide"><!--START clock adj slider ROW-->
+		<div class="col-md-2"> 
       <div id="clockAdj">Clock Brightness: <span id="adjValue"> 50 </span> %</div>
       <div id="slider"></div>
-		</div> <!-- End clock adj -->
-	</div>
-		<!-- Begin descriptive text -->
-	<div class="row">
-		<div class="col-md-6 col-lg-4 col-lg-push-4">
+		</div> 
+	</div><!--END clock adj slider ROW-->
+		<div class="row printHide"><!--START first page ROW-->
+		<div class="col-md-4 col-md-push-4">
 			<div class="commonDiv">
 			<img class="img-responsive img-circle" src="myImages/ronEicher.jpg" alt="Picture of me"/>
 			<h2 class="text-muted text-center">Welcome!</h2>
 			<p class="lead">My name is Ron Eicher. I am a Summa Cum Laude B.S. Web Development graduate of Franklin University. This site was created to illustrate some of my skills. 
 			</div>
 		</div>
-		<div class="col-md-6 col-lg-4 col-lg-pull-4 text-center">
+		<div class="col-md-4 col-md-pull-4 text-center">
 			<div class="commonDiv text-muted">
 				<h2 class="text-muted">Technologies Used</h2>
 				<div class="row">
@@ -92,7 +93,7 @@
 				<img class="img-responsive img-rounded" src="myImages/computer.jpg" alt="computer picture"/>
 			</div>
 		</div>
-		<div class="col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-0">
+		<div class="col-md-4" >
 			<div class="commonDiv">
 				<h2 class="text-muted text-center">Embedded Video</h2>
 				<p class="lead">For your enjoyment, click "load" if you would like some background music. Use the YouTube controls to start.</p>
@@ -104,19 +105,376 @@
 				</div>
 			</div>
 		</div>
-	</div> <!-- END descriptive text -->
-	<div class="row"> <!-- Begin Goals -->
-		<div class="col-md-6" style="padding-top: 30px;">
-			<div class="panel panel-default">
-				<!-- Default panel contents -->
-				<div class="panel-heading">Panel heading</div>
-				<div class="panel-body">
-					<p>...</p>
-				</div>
+	</div> <!-- END first page ROW-->
+	<div class="row printHide" style="margin-top: 55px;"> <!--START goals intro and picture ROW-->
+		<div class="col-md-6">
+			<div class="commonDiv">
+				<h2 class="text-muted text-center">Goals</h2>
+				<p class="lead">This is an exciting time to be in the web development field. I am looking forward to gaining more experience and adding to my skill set. In addition to a personal library of dozens of books, I frequently consult online sources such as Treehouse, W3Schools, Stack Overflow, CodeAcademy, and others. The appealing aspect of the Web Development field is the lifetime learning adventure. My strategic vision is illustrated below, but I maintain an awareness that adjustments will be made relative to employer needs and future developments. 
 			</div>
 		</div>
 		<div class="col-md-6">
-		</div> <!-- END Goals -->
-</div>
+			<img src="myImages/ComputerBooks.jpg" alt="Partial view of my library" class="img-responsive"/>
+		</div>
+	</div><!--END goals intro and picture ROW-->
+		<div class="row printHide"><!--START panel st/lt goals ROW-->
+		<div class="col-md-6" style="padding-top: 20px;">
+			<div class="panel panel-success">
+				<div class="panel-heading">Short-term goals</div>
+				<div class="panel-body" style="padding-left: 40px;">
+					<ol>
+						<li>Obtain a remote junior web developer position.</li>
+						<li>Increase my expertise with HTML5, CSS3, & jQuery.</li>
+						<li>Stay up to date when Bootstrap 4 is released.</li>
+						<li>Detailed review of the HTML 5 canvas element.</li>
+						<li>Research available jQuery plug-ins.</li>
+						<li>Continue to develop experience with Vim.</li>
+						<li>Continue to develop experience with the Command Line.</li>
+						<li>Continue to develop experience with Git version control.</li>
+						<li>Continue to develop experience using GitHub.</li>
+						<li>View additional Treehouse programming courses.</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6" style="padding-top: 20px;">
+			<div class="panel panel-warning">
+				<div class="panel-heading">Long-term goals</div>
+				<div class="panel-body" style="padding-left: 40px;">
+					<ol>
+						<li>Learn Mongo Database.</li>
+						<li>Learn Express.js.</li>
+						<li>Learn Angular.js.</li>
+						<li>Learn Node.js.</li>
+						<li>Become a MEAN full-stack developer.</li>
+						<li>Learn additional programming languages relevant to my employer</li>
+						<li>Learn C++.</li>
+						<li>Learn C#.</li>
+						<li>Learn XCode.</li>
+						<li>Contribute to open source projects on GitHub.</li>
+					</ol>
+				</div>
+			</div> 
+		</div>
+	</div><!--END panel st/lt goals ROW-->
+	<div class="row printHide"> <!-- START school project ROW-->
+		<div class="col-md-6">
+			<div class="commonDiv">
+				<h2 class="text-muted text-center">School Project</h2>
+				<p class="lead">My Franklin University curriculum included many programming languages such as HTML, CSS, Javascript, Java, Python, JQuery, MySQL, PHP, and Ruby. My capstone project utilizes HTML, CSS, Javascript, PHP, and MySQL. This project was not responsively designed, thus it is best viewed on a desktop. The project was for a fictitious automotive company named Lugnuts Automotive. It was completed by a two person team.</p>
+			</div>
+		</div> 
+		<div class="col-md-6">
+			<div class="commonDiv">
+				<h2 class="text-muted text-center">Lugnut Automotive</h2>
+				<p class="lead">This project included a logo design, site design, project specification, interfacing with a provided database, creation of a shopping cart, creation of an order form, and form validation. It is hosted by Yahoo on the domain webweavin.com that I own. The link below will open in a new window.</p>
+				<a href="http://www.webweavin.com" target="_blank"><button type="button" class="btn btn-primary btn-block">Lugnut Automotive  (www.webweavin.com)</button></a>
+			</div>
+		</div>
+	</div><!--END school project ROW-->
+	<div class="printHide">
+		<div class="row"><!--START outer white background ROW-->
+			<div class="col-md-8 col-md-offset-2">
+				<h2 class="text-muted text-center printHide">R&eacutesum&eacute</h2>
+				<div id="resume"><br/><!--START resume DIV-->
+					<div class="row">
+						<div class="col-xs-3 col-xs-offset-8 col-md-2 col-md-offset-9">
+							<button id="printResume" class="btn btn-lg"><span class="glyphicon glyphicon-print"</span></button>
+						</div>
+					</div>
+					<div class="row"><!--START address ROW-->
+						<div class="col-xs-12 text-center" style="padding-top: 40px;">
+							<b class="myName" style="font-size: 1.3em;">Ronald M. Eicher II</b><br/>
+							1835 Arbor Hill Drive<br/>
+							Columbus, OH 43229<br/>
+							P: <a href="tel:1-614-282-6522">(614) 282-6522</a><br/>
+							<a href="mailto:ronaldmeicherii@gmail.com">ronaldmeicherii@gmail.com</a>
+						</div>
+					</div><br/><br/><br/><!--END address ROW-->
+					<!--Resume columns only total 11 to create the right side margin-->
+					<div class="row"><!--START objective ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Objective</b>
+						</div>
+						<div class="col-xs-7 col-md-8">
+							<p>To obtain a remote junior web developer position to utilize my skills, enhance my experience, learn new technologies, and grow to become a MEAN full-stack developer. </p>
+						</div>
+					</div><br/><!--END objective ROW-->
+					<div class="row"><!--START education ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Education</b>
+						</div>
+						<div class="col-xs-8 col-md-9">
+							B.S. Web Development<br/>
+							<em>Summa Cum Laude</em><br/>
+							Franklin University<br/>
+							Columbus, OH 43215
+						</div>
+					</div><br/><!--END education ROW-->
+					<div class="row"><!--START ePortfolio ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>ePortfolio</b>
+						</div>
+						<div class="col-xs-7 col-md-4">
+							<span><em>Websites</em></span>
+							<ul style="list-style-position: inside;">
+								<li>EPortfolio github.io</li>
+								<li>www.webweavin.com</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
+							<span><em>Treehouse</em></span>
+							<ul style="list-style-position: inside;">
+								<li>6,446 points</li>
+								<li>80 Badges</li>
+							</ul>
+						</div>
+					</div><br/><!--END ePortfolio ROW-->
+					<div class="row"><!--START first skills ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Skills</b>
+						</div>
+						<div class="col-xs-7 col-md-4">
+							<span><em>Coding</em></span>
+							<ul style="list-style-position: inside;">
+								<li>HTML 5</li>
+								<li>CSS 3</li>
+								<li>Javascript</li>
+								<li>Jquery</li>
+								<li>Bootstrap 3</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
+							<span><em>Debugging</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Safari Web Inspector</li>
+								<li>Responsive Mode</li>
+								<li>Firebug</li>
+								<li>Chrome DevTools</li>
+								<li>iOS Simulator</li>
+							</ul>
+						</div>
+					</div><br/><!--END first skills ROW-->
+					<div class="row"><!--START second skills ROW-->
+						<div class="col-xs-7 col-xs-offset-4 col-md-3 col-sm-offset-3">
+							<span><em>Editing</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Vim</li>
+								<li>WebStorm</li>
+								<li>Aptana</li>
+								<li>SublimeText</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-1">
+							<span><em>Computer</em></span>
+							<ul style="list-style-position: inside;">
+								<li>OSX Yosemite 10.10.5</li>
+								<li>Windows 10</li>
+								<li>Terminal Bash Shell</li>
+								<li>iPhone</li>
+							</ul>
+						</div>
+					</div><br/><!--END second skills ROW-->
+					<div class="row"><!--START third skills ROW-->
+						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-3">
+							<span><em>General</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Photoshop</li>
+								<li>Microsoft Office Suite</li>
+								<li>Typing</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-0">
+							<span><em>Version Control/Tools</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Git</li>
+								<li>JS Lint</li>
+								<li>W3 Validators</li>
+							</ul>
+						</div>
+					</div><br/><!--END third skills ROW-->
+					<div class="row"><!--START hobbies ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Hobbies</b>
+						</div>
+						<div class="col-xs-7 col-md-4">
+							<span><em>Outside</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Geocaching</li>
+								<li>Gardening</li>
+								<li>Antique Cars</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
+							<span><em>Inside</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Chess</li>
+								<li>Craft Beer Tasting</li>
+								<li>Video Games</li>
+							</ul>
+						</div>
+					</div><br/><!--END hobbies ROW-->
+					<div class="row"><!--START Future Goals ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Future Goals</b>
+						</div>
+						<div class="col-xs-7 col-md-8">
+							<p>I am looking forward to learning any new languages pertinent to my employer, MongoDB, Express, Angular, Node, and deeper exploration of the exciting HTML 5 Canvas element.</p>
+						</div>
+					</div><!--END objective ROW-->
+				</div><!--End Resume DIV-->
+			</div>
+		</div><!--END Outer white background ROW-->
+	</div><!--END printHide DIV for Resume-->
+	<div class="printResume">
+		<div class="row"><!--START outer white background ROW-->
+			<div class="col-xs-12">
+				<h2 class="text-muted text-center printHide">R&eacutesum&eacute</h2>
+				<div id="resume"><br/><!--START resume DIV-->
+					<div class="row"><!--START address ROW-->
+						<div class="col-xs-12 text-center" style="padding-top: 40px;">
+							<b class="myName" style="font-size: 1.3em;">Ronald M. Eicher II</b><br/>
+							1835 Arbor Hill Drive<br/>
+							Columbus, OH 43229<br/>
+							P: <a href="tel:1-614-282-6522">(614) 282-6522</a><br/>
+							<a href="mailto:ronaldmeicherii@gmail.com">ronaldmeicherii@gmail.com</a>
+						</div>
+					</div><br/><br/><br/><!--END address ROW-->
+					<!--Resume columns only total 11 to create the right side margin-->
+					<div class="row"><!--START objective ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Objective</b>
+						</div>
+						<div class="col-xs-7 col-md-8">
+							<p>To obtain a remote junior web developer position to utilize my skills, enhance my experience, learn new technologies, and grow to become a MEAN full-stack developer. </p>
+						</div>
+					</div><br/><!--END objective ROW-->
+					<div class="row"><!--START education ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Education</b>
+						</div>
+						<div class="col-xs-8 col-md-9">
+							B.S. Web Development<br/>
+							<em>Summa Cum Laude</em><br/>
+							Franklin University<br/>
+							Columbus, OH 43215
+						</div>
+					</div><br/><!--END education ROW-->
+					<div class="row"><!--START ePortfolio ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>ePortfolio</b>
+						</div>
+						<div class="col-xs-7 col-md-4">
+							<span><em>Websites</em></span>
+							<ul style="list-style-position: inside;">
+								<li>EPortfolio github.io</li>
+								<li>www.webweavin.com</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
+							<span><em>Treehouse</em></span>
+							<ul style="list-style-position: inside;">
+								<li>6,446 points</li>
+								<li>80 Badges</li>
+							</ul>
+						</div>
+					</div><br/><!--END ePortfolio ROW-->
+					<div class="row"><!--START first skills ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Skills</b>
+						</div>
+						<div class="col-xs-7 col-md-4">
+							<span><em>Coding</em></span>
+							<ul style="list-style-position: inside;">
+								<li>HTML 5</li>
+								<li>CSS 3</li>
+								<li>Javascript</li>
+								<li>Jquery</li>
+								<li>Bootstrap 3</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
+							<span><em>Debugging</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Safari Web Inspector</li>
+								<li>Responsive Mode</li>
+								<li>Firebug</li>
+								<li>Chrome DevTools</li>
+								<li>iOS Simulator</li>
+							</ul>
+						</div>
+					</div><br/><!--END first skills ROW-->
+					<div class="row"><!--START second skills ROW-->
+						<div class="col-xs-7 col-xs-offset-4 col-md-3 col-sm-offset-3">
+							<span><em>Editing</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Vim</li>
+								<li>WebStorm</li>
+								<li>Aptana</li>
+								<li>SublimeText</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-1">
+							<span><em>Computer</em></span>
+							<ul style="list-style-position: inside;">
+								<li>OSX Yosemite 10.10.5</li>
+								<li>Windows 10</li>
+								<li>Terminal Bash Shell</li>
+								<li>iPhone</li>
+							</ul>
+						</div>
+					</div><br/><!--END second skills ROW-->
+					<div class="row"><!--START third skills ROW-->
+						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-3">
+							<span><em>General</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Photoshop</li>
+								<li>Microsoft Office Suite</li>
+								<li>Typing</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-0">
+							<span><em>Version Control/Tools</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Git</li>
+								<li>JS Lint</li>
+								<li>W3 Validators</li>
+							</ul>
+						</div>
+					</div><br/><!--END third skills ROW-->
+					<div class="row"><!--START hobbies ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Hobbies</b>
+						</div>
+						<div class="col-xs-7 col-md-4">
+							<span><em>Outside</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Geocaching</li>
+								<li>Gardening</li>
+								<li>Antique Cars</li>
+							</ul>
+						</div>
+						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
+							<span><em>Inside</em></span>
+							<ul style="list-style-position: inside;">
+								<li>Chess</li>
+								<li>Craft Beer Tasting</li>
+								<li>Video Games</li>
+							</ul>
+						</div>
+					</div><br/><!--END hobbies ROW-->
+					<div class="row"><!--START Future Goals ROW-->
+						<div class="col-xs-3 col-xs-offset-1 col-md-2">
+							<b>Future Goals</b>
+						</div>
+						<div class="col-xs-7 col-md-8">
+							<p>I am looking forward to learning any new languages pertinent to my employer, MongoDB, Express, Angular, Node, and deeper exploration of the exciting HTML 5 Canvas element.</p>
+						</div>
+					</div><!--END objective ROW-->
+				</div><!--End Resume DIV-->
+			</div>
+		</div><!--END Outer white background ROW-->
+	</div><!--END printResume DIV for Resume-->
+</div><!--END Web page CONTAINER DIV-->
 </body>
 </html>
