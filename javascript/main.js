@@ -34,35 +34,59 @@ jQuery(document).ready(function ($) {
 
 
         otherContent.promise().then(function () {
+			if (screen.width > 800 && window.innerWidth > 800 && $(window).width() > 800) {
+				console.log(screen.width);
+			// START Navbar link code to scroll on desktop (compensate for toolbars and fixed nav)
+			// Offsets are zero before the fade in //////
+			// Window height and screen height are different due to Mac tool bar
+				var windowHeight = $(window).height(); 
+				var screenHeight = screen.height; 
+				var diff = screenHeight - windowHeight; 
+				var navHeight = $('#addedNav').height();
+				// Find all items with href beginning with '#link'
+				var navItems = $('[href^="#link"]');
+				// Loop the navbar links, set scroll amount to link target offset compensating
+				// for the Mac header and the navbar height of 50. 
+				navItems.each(function () {
+					var targetId = $(this).attr("href");
+					var item = $(targetId); 
+					var scrollAmount =((item.offset().top) - (screenHeight - windowHeight + navHeight));
+					$(this).on("click", function (event) {
+						event.preventDefault();
+						window.scrollTo(0,scrollAmount); 
+					// scrollspy makes obsolete	$(this).parent().addClass("active");
+					});
+						
+				});
+			}
+		});
+
+			// END Navbar code /////////////////////////////////////////////////////////
 
             //holdFooter();
             //$("#videoholder").load("videomi.html");
-        });
+        
 
 
 
 // End Slide logo code /////////////////////////////////////////////////////////////////////////////////////////////////
 // START Navbar id="addedDiv" code to "stick" to the top //////////////////////
-var checkTop;
 $(window).on("scroll", function () {
-	if ($(window).scrollTop() < $("#addedNav").offset().top) {
-		checkTop = $("#addedNav").offset().top;
-	} else {
-	   checkTop = checkTop;
-	}	   
-	console.log(checkTop);
-	console.log($("#addedNav").offset().top);
-	console.log($(window).width());
-	console.log($(window).scrollTop());
 	// Fix navbar if window scroll exeeds offset, but only for larger devices
-	if (($(window).scrollTop() > $("#addedNav").offset().top) && $(window).width() > 800 ) {
+	var windowHeight = $(window).height(); 
+	var screenHeight = screen.height; 
+	var diff = screenHeight - windowHeight; 
+	var bannerHeight = $('.logobar').height() * 3; 
+	console.log(bannerHeight); 
+	
+	if (($(window).scrollTop() > bannerHeight && $(window).width() > 780 && screen.width > 780)) {
 		$("#addedNav").addClass("navbar-fixed-top");
 	}
-	else if ($(window).scrollTop() < checkTop) { 
+	else if ($(window).scrollTop() < bannerHeight) { 
 	$("#addedNav").removeClass("navbar-fixed-top");
-	}
-}); 
-// END Navbar code /////////////////////////////////////////////////////////
+	}; 
+});
+
     // START Opacity slider code //////////////////////////////////////////////////////////
     $("#slider").slider({
         value: 50,

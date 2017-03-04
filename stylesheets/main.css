@@ -1,6 +1,6 @@
 body {
-    overflow-x: hidden; /* Eliminated the "mystery horizontal scroll bar" */
     background: #220033;
+    /*overflow-x: hidden; /* Eliminated the "mystery horizontal scroll bar" */
 }
 
 .logobar {
@@ -40,17 +40,7 @@ body {
     font-family: alarmclock;
     font-size: 1.9rem;
     font-weight: bold;
-    /*margin-right: 20px;
-    position: relative;
-    left: 2px;*/
 }
-
-/*@media only screen and(max-width: 320px) {
-    #clockDisplay {
-        font-size: 15px;
-    }
-}*/
-
 
 #clockAdj {
     color: white;
@@ -66,8 +56,21 @@ body {
 }
 
 /** END Clock Display *************************************************************************************************/
-
+/** Bootstrap required ***********/
+/** Required for scrollspy **/
+body {
+	position: relative;
+}
+/*******************************/
 /** Override Bootstrap styles *************************************************************************************************/
+.carousel-caption > h3 {
+	color: #ffffff;
+	background-color: gray;
+}
+
+ol.carousel-indicators {
+	background-color: gray;
+}
 
 .commonDiv {
 	color: #ccddee;
@@ -81,6 +84,10 @@ body {
 	background-color: white;
 }
 
+ol, ul {
+	list-style-type: inside; 
+}
+
 @media screen {
 		.printResume {
 		display: none;
@@ -89,20 +96,18 @@ body {
 
 /** Print resume ****************************/
 @media print {
-/*body > div.container >	div.row.printHide {
-		display: none;
-	}*/
 	.printHide {
 		display: none;
 	}
+}
 
 	.printResume {
 		display: visible;
 	}
 
 	#resume {
-		font-size: 12pt; 
 		font-family: Garamond; 
+		font-size: 12pt; 
 	}
 
 	.myName {
