@@ -34,16 +34,20 @@ jQuery(document).ready(function ($) {
 
 
         otherContent.promise().then(function () {
-			if (screen.width > 800 && window.innerWidth > 800 && $(window).width() > 800) {
-				console.log(screen.width);
+			if (screen.width > 100 && window.innerWidth > 100 && $(window).width() > 100) {
+				window.scrollTo(0,1);
 			// START Navbar link code to scroll on desktop (compensate for toolbars and fixed nav)
 			// Offsets are zero before the fade in //////
 			// Window height and screen height are different due to Mac tool bar
 				var windowHeight = $(window).height(); 
 				var screenHeight = screen.height; 
 				var diff = screenHeight - windowHeight; 
-				var navHeight = $('#addedNav').height();
+				var navHeight = $('#addedNav').outerHeight();
 				// Find all items with href beginning with '#link'
+				// The code below if for ipads
+				if (diff < 50) {
+					navHeight = $('#addedNav').outerHeight(true); 
+				}
 				var navItems = $('[href^="#link"]');
 				// Loop the navbar links, set scroll amount to link target offset compensating
 				// for the Mac header and the navbar height of 50. 
@@ -60,6 +64,13 @@ jQuery(document).ready(function ($) {
 				});
 			}
 		});
+		// The code below activates the menu icon click on smaller devices when any link is clicked. 
+		// Without the code below the uncollapsed menu blocks the screen, forces user to click again, and skews the scroll amount!
+		if ($(window).width() < 1100) {
+			$('[href^="#link"]').on("click", function(){
+				$('button.navbar-toggle').trigger("click");
+			});
+		}
 
 			// END Navbar code /////////////////////////////////////////////////////////
 
@@ -72,14 +83,13 @@ jQuery(document).ready(function ($) {
 // End Slide logo code /////////////////////////////////////////////////////////////////////////////////////////////////
 // START Navbar id="addedDiv" code to "stick" to the top //////////////////////
 $(window).on("scroll", function () {
-	// Fix navbar if window scroll exeeds offset, but only for larger devices
+	// Fix navbar for all devices, leaving conditionals as a reminder of option not to fix navbar for smaller devices.
 	var windowHeight = $(window).height(); 
 	var screenHeight = screen.height; 
 	var diff = screenHeight - windowHeight; 
 	var bannerHeight = $('.logobar').height() * 3; 
-	console.log(bannerHeight); 
 	
-	if (($(window).scrollTop() > bannerHeight && $(window).width() > 780 && screen.width > 780)) {
+	if (($(window).scrollTop() > bannerHeight && $(window).width() > 100 && screen.width > 100)) {
 		$("#addedNav").addClass("navbar-fixed-top");
 	}
 	else if ($(window).scrollTop() < bannerHeight) { 

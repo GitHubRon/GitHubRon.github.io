@@ -63,17 +63,45 @@ body {
 }
 /*******************************/
 /** Override Bootstrap styles *************************************************************************************************/
-.carousel-caption > h3 {
-	color: #ffffff;
-	background-color: gray;
+.purpleHeader {
+	color: #7777ff;
+}
+
+.darkHeader {
+	color: #220033;
+}
+
+.contactFooter {
+	background-color: #6633ff;
+	color: #220033;
+}
+
+.contactFooter a {
+	text-decoration: none;
+	color: #220033;
 }
 
 ol.carousel-indicators {
-	background-color: gray;
+	margin-bottom: -1px;
+}
+
+.lead { 
+	color: #aaaaff;
+}
+
+.carousel-caption > h3 {
+	color: #ffffff;
+	background-color: #339933; 
+	border-radius: 25px;
+}
+
+ol.carousel-indicators {
+	background-color: #339933;
+	border-radius: 15px;
 }
 
 .commonDiv {
-	color: #ccddee;
+	color: #bbbbbb;
 }
 
 .techList {
