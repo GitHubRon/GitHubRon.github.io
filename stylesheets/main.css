@@ -1,12 +1,4 @@
-body {
-    background: #220033;
-    /*overflow-x: hidden; /* Eliminated the "mystery horizontal scroll bar" */
-}
-
-.logobar {
-    min-height: 30px;
-    position: relative;
-}
+/***START Heading banner code************************************************/
 
 #logobar1 {
     background-color: red;
@@ -27,11 +19,16 @@ body {
     text-align: center;
 }
 
+.logobar {
+    min-height: 30px;
+    position: relative;
+}
 
-/** START Clock Display ***********************************************************************************************/
-@font-face {
-    font-family: alarmclock;
-    src: url(../fonts/alarmclock.ttf);
+/***START Clock Code*********************************************************/
+
+#clockAdj {
+    color: white;
+    font-size: .9em;
 }
 
 #clockDisplay {
@@ -42,11 +39,6 @@ body {
     font-weight: bold;
 }
 
-#clockAdj {
-    color: white;
-    font-size: .9em;
-}
-
 #slider {
     background-color: #666666;
     display: inline-block;
@@ -55,20 +47,17 @@ body {
     width: 100%;
 }
 
-/** END Clock Display *************************************************************************************************/
-/** Bootstrap required ***********/
-/** Required for scrollspy **/
-body {
-	position: relative;
-}
-/*******************************/
-/** Override Bootstrap styles *************************************************************************************************/
-.purpleHeader {
-	color: #7777ff;
+@font-face {
+    font-family: alarmclock;
+    src: url(../fonts/alarmclock.ttf);
 }
 
-.darkHeader {
-	color: #220033;
+/***END Clock code***********************************************************/
+
+/***START General styling code***********************************************/
+
+.commonDiv {
+	color: #bbbbbb;
 }
 
 .contactFooter {
@@ -77,11 +66,53 @@ body {
 }
 
 .contactFooter a {
+	color: #220033;
 	text-decoration: none;
+}
+
+.darkHeader {
 	color: #220033;
 }
 
-ol.carousel-indicators {
+.purpleHeader {
+	color: #7777ff;
+}
+
+.resume {
+	background-color: white;
+}
+
+.techList {
+	list-style-type: none; 
+}
+
+body {
+    background: #220033;
+}
+
+ol, ul {
+	list-style-type: inside; 
+}
+
+/***END of General styling code**********************************************/
+
+/***Bootstrap required code for scrollspy************************************/
+
+body {
+	position: relative;
+}
+
+/***START Override bootstrap styles******************************************/
+
+.carousel-caption > h3 {
+	background-color: #339933; 
+	border-radius: 25px;
+	color: #ffffff;
+}
+
+.carousel-indicators {
+	background-color: #339933;
+	border-radius: 15px;
 	margin-bottom: -1px;
 }
 
@@ -89,32 +120,9 @@ ol.carousel-indicators {
 	color: #aaaaff;
 }
 
-.carousel-caption > h3 {
-	color: #ffffff;
-	background-color: #339933; 
-	border-radius: 25px;
-}
+/***END Override bootstrap styles********************************************/
 
-ol.carousel-indicators {
-	background-color: #339933;
-	border-radius: 15px;
-}
-
-.commonDiv {
-	color: #bbbbbb;
-}
-
-.techList {
-	list-style-type: none; 
-}
-
-#resume {
-	background-color: white;
-}
-
-ol, ul {
-	list-style-type: inside; 
-}
+/***START print and screen media styles for resume***************************/
 
 @media screen {
 		.printResume {
@@ -122,24 +130,19 @@ ol, ul {
 	}
 }
 
-/** Print resume ****************************/
 @media print {
-	.printHide {
-		display: none;
-	}
-}
-
-	.printResume {
-		display: visible;
-	}
-
-	#resume {
-		font-family: Garamond; 
-		font-size: 12pt; 
-	}
-
 	.myName {
 		font-size: 16pt;
 	}
 
+	.printHide {
+		display: none;
+	}
+
+	.resume {
+		font-family: Garamond; 
+		font-size: 12pt; 
+	}
 }
+
+/***END print and screen media styles for resume*****************************/
