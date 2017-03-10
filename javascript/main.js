@@ -82,11 +82,11 @@ jQuery(document).ready(function ($) {
         min: 0
     });
 
-    $("#clockDisplay").css("opacity", 0.50);
+    $("#clockDisplay").css("opacity", .50);
 
 
 
-    $("#slider").on("slide", function (ui) {
+    $("#slider").on("slide", function (event, ui) {
         var valueMessage = ui.value;
         $("#adjValue").text(valueMessage);
         var setOpacity = ui.value / 100;
