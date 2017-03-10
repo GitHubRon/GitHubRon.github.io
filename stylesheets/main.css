@@ -120,6 +120,10 @@ body {
 	color: #aaaaff;
 }
 
+img {
+  margin: auto;
+}
+
 /***END Override bootstrap styles********************************************/
 
 /***START print and screen media styles for resume***************************/

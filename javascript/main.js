@@ -5,6 +5,7 @@
 $.noConflict();
 jQuery(document).ready(function ($) {
 
+    /* Eliminating the three div slide in, then fade, too choppy on Safari browser or slower connections. 
 // START Slide logo code, navbar, and link scrolling code
     var logoStripe = $("div.logobar");
     var otherContent = $("nav").siblings().addBack();
@@ -22,7 +23,7 @@ jQuery(document).ready(function ($) {
         otherContent.fadeIn("slow");
     });
 
-    otherContent.promise().then(function () {
+    otherContent.promise().then(function () {*/
         if (screen.width > 100 && window.innerWidth > 100 && $(window).width() > 100) {
         // The code below gives a slight initial scroll, future movements are counted as a scroll.
         // Links do not function properly without this, except after a manual scroll.
@@ -53,7 +54,7 @@ jQuery(document).ready(function ($) {
                 });
             });
         }
-    });
+   //* part of the slide and fade in code  });
     // The code below activates the menu icon click on smaller devices when any link is clicked.
     // Without the code below the uncollapsed menu blocks the screen, forces user to click again, and skews the scroll amount!
     if ($(window).width() < 1100) {
