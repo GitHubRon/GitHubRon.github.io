@@ -52,6 +52,13 @@
     src: url(../fonts/alarmclock.ttf);
 }
 
+/***Disable Clock Adjustment for mobile devices******************************/
+@media screen and (max-width: 1100px) {
+  #clockAdj, #slider {
+    visibility: hidden;
+  }
+}
+  
 /***END Clock code***********************************************************/
 
 /***START General styling code***********************************************/
