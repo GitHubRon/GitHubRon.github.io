@@ -4,7 +4,77 @@
 *****************************************************************************/
 $.noConflict();
 jQuery(document).ready(function ($) {
+/****************************************************************************/
+/***START code for reader name input*****************************************/
+    $("#readerInput").hide();
+    // This function is called if there is not a valid localStorage.readerName
+    function nameFormSetup() {
+        // Shows the reader input form
+        $("#readerInput").show();
+        // Increase the size of the input field if needed
+        $("#readerName").on("keyup", function (event) {
+            var entryLength = $(this).val().length;
+            var startSize = $("#readerName").attr("size");
+            if (entryLength >= startSize) {
+                $("#readerName").attr("size", entryLength);
+            }
 
+        });
+        // Make the enter key trigger a click event on the submit button
+        $("#readerName").on("keydown",function (event) {
+                if (event.which === 13) {
+                    $("#readerSubmit").trigger("click"); 
+                }
+            });
+        $("#readerSubmit").on("click", function(event) {
+            // Check that something was entered, if valid
+            // store value of readerName and populate span before footer,
+            // blur the field and set reader var for intro paragraph
+            if ($("#readerName").val() !== "" && $("#readerName").val() !== null 
+                && $("#readerName").val() !== " ") {
+                localStorage.readerName = $("#readerName").val();
+                $("#readerThanks").html("<h2 class='lead'>Thanks for visiting " + localStorage.readerName + "</h2>");
+
+                // Remove input field border and blur
+                $("#readerName").css("border", "0px").blur();
+                var reader = localStorage.readerName;
+                // Hide the submit button
+                $(this).hide();
+                // This variable is the name in the intro paragraph
+                if(reader != "" && reader != null) {
+                    $("#reader").text(" "+reader);
+                }
+            }
+        });
+    }
+    if(localStorage.readerName === "" || localStorage.readerName === null 
+            || localStorage.readerName === undefined) {
+        nameFormSetup();
+    } else {
+        // If there is a readerName display personalized welcome greeting
+        // and leave the input form hidden. Provide a button for the user
+        // to change the name if they are not the person being greeted.
+        $("#readerInput").before("<div id='returnUser' class='col-md-9 purpleHeader'><h2>Welcome back " + localStorage.readerName + "</h2><button id='changeName' class='btn btn-default'>Click if you are not " + localStorage.readerName + "</button><br/><br/></div>");
+        $("#reader").text(" " + localStorage.readerName);
+
+        $("#readerThanks").html("<h2 class='lead'>Thanks for visiting " + localStorage.readerName + "</h2>");
+    }
+    // If the changeName button is clicked, reset localStorage.readerName,
+    // hide the returnUser greeting, call the function to present the input,
+    // reset the #reader text and #readerThanks test, and put the focus
+    // on #readerName
+    $("#changeName").on("click", function () {
+        localStorage.readerName = "";
+        $("#returnUser").hide();
+        nameFormSetup();
+        $("#reader").text("");
+        $("#readerName").focus();
+        $("#readerThanks").html("");
+    });
+
+
+
+/****************************************************************************/
     /* Eliminating the three div slide in, then fade, too choppy on Safari browser or slower connections. 
 // START Slide logo code, navbar, and link scrolling code
     var logoStripe = $("div.logobar");

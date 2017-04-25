@@ -1,3 +1,4 @@
+/****************************************************************************/
 /***START Heading banner code************************************************/
 
 #logobar1 {
@@ -61,8 +62,23 @@
   
 /***END Clock code***********************************************************/
 
-/***START General styling code***********************************************/
+/***START Reader input styles************************************************/
+#readerInput {
+  font-size: 2em;
+}
 
+#welcome {
+  vertical-align: middle;
+}
+
+input {
+  background-color: #220033;
+  max-width: 100%; 
+}
+
+/***END Reader input styles**************************************************/
+
+/***START General styling code***********************************************/
 .commonDiv {
 	color: #bbbbbb;
 }

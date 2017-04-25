@@ -28,7 +28,7 @@
   <script src="javascript/main.js"></script>
 </head>
 
-<!-- Body tag attributes needed for Bootstrap scrollspy -->
+<Stay up to date when Bootstrap 4 is released.!-- Body tag attributes needed for Bootstrap scrollspy -->
 <body data-spy="scroll" data-target="#addedNav" data-offset="190">
 	<div id="linkHome"></div>
 <div class="logobar printHide" id="logobar1"></div>
@@ -72,14 +72,19 @@
       <div id="clockAdj">Clock Brightness: <span id="adjValue"> 50 </span> %</div>
       <div id="slider"></div>
 		</div> 
+    <div class="col-md-9 purpleHeader" id="readerInput">
+      <label for="readerName">Welcome</label><br/>
+      <input type="text" spellcheck="false"  name="readerName" id="readerName" size="10" maxlength="28" placeholder="Enter first name" autofocus/>&nbsp;<button class="btn btn-default btn-lg" id="readerSubmit">Save</button><br/><br/>
+    </div>
 	</div><!--END clock adj slider ROW-->
+  <div class="row printHide">
+  </div>
 	<div class="row printHide"><!--START Picture and greeting ROW-->
 		<div class="col-md-3">
 			<img class="img-responsive img-circle" src="myImages/ronEicher.jpg" alt="Picture of me"/>
 		</div>
 		<div class="col-md-6 commonDiv" style="margin-top: -20px;">
-			<h2 class="purpleHeader text-center">Welcome!</h2>
-      <p class="lead">Hello, my name is Ron Eicher. I am an aspiring junior web developer, and a graduate of Franklin University, B.S. Web Development, Summa Cum Laude. This site was created to illustrate some of my skills and interests. Enjoy the site, and feel free to contact me.</p>
+      <br/><br/><p class="lead">Hello<span id="reader"></span>, my name is Ron Eicher. I am an aspiring junior web developer, and a graduate of Franklin University, B.S. Web Development, Summa Cum Laude. This site was created to illustrate some of my skills and interests. Enjoy the site, and feel free to contact me.</p>
 		</div>
 		<div class="col-md-3">
 			<img class="img-responsive img-rounded" src="myImages/computer.jpg" alt="computer picture"/>
@@ -130,14 +135,13 @@
 				<div class="panel-body" style="padding-left: 40px;">
 					<ol>
 						<li>Obtain a remote junior web developer position.</li>
-						<li>Increase my expertise with HTML5, CSS3, & jQuery.</li>
+						<li>Increase my expertise with my existing skill set.</li>
 						<li>Stay up to date when Bootstrap 4 is released.</li>
-						<li>Detailed review of the HTML 5 canvas element.</li>
-						<li>Research additional jQuery plug-ins.</li>
-						<li>Continue to develop experience with Vim.</li>
-						<li>Continue to develop experience with the Command Line.</li>
-						<li>Continue to develop experience with Git version control.</li>
-						<li>Continue to develop experience using GitHub.</li>
+						<li>Learn Grunt, Gulp, and SASS.</li>
+						<li>Self study of MongoDB, Express, Angular, Node.</li>
+						<li>Self study of npm.</li>
+						<li>Self study of templating w/ Handlebars & EJS.</li>
+						<li>Self study of Mocha testing framework.</li>
 						<li>View additional Treehouse programming courses.</li>
 					</ol>
 				</div>
@@ -148,14 +152,13 @@
 				<div class="panel-heading">Long-term goals</div>
 				<div class="panel-body" style="padding-left: 40px;">
 					<ol>
-						<li>Learn Mongo Database.</li>
-						<li>Learn Express.js.</li>
-						<li>Learn Angular.js.</li>
-						<li>Learn Node.js.</li>
 						<li>Become a MEAN full-stack developer.</li>
-						<li>Learn additional programming languages relevant to my employer</li>
+						<li>Learn additional programming languages relevant to my employer.</li>
+						<li>Learn React.js.</li>
+						<li>Learn Vue.js.</li>
+						<li>Learn Python.</li>
 						<li>Learn C++.</li>
-						<li>Learn C#.</li>
+						<li>Learn HTML5 Canvas Element.</li>
 						<li>Learn XCode.</li>
 						<li>Contribute to open source projects on GitHub.</li>
 					</ol>
@@ -167,13 +170,13 @@
 		<div class="col-md-6">
 			<div class="commonDiv">
 				<h2 class="purpleHeader text-center">School Project</h2>
-				<p class="lead">My Franklin University curriculum included many programming languages such as HTML, CSS, Javascript, Java, Python, JQuery, MySQL, PHP, and Ruby. My capstone project utilizes HTML, CSS, Javascript, PHP, and MySQL. This project was not responsively designed, thus it is best viewed on a desktop. The project was for a fictitious automotive company named Lugnuts Automotive. It was completed by a two person team.</p>
+				<p class="lead">My Franklin University curriculum included many programming languages such as HTML, CSS, Javascript, Java, Python, JQuery, MySQL, PHP, and Ruby. My capstone project utilizes HTML, CSS, Javascript, PHP, and MySQL. The project was for a fictitious automotive company named Lugnuts Automotive. It was completed by a two person team.</p>
 			</div>
 		</div> 
 		<div class="col-md-6">
 			<div class="commonDiv">
 				<h2 class="purpleHeader text-center">Lugnut Automotive</h2>
-				<p class="lead">This project included a logo design, site design, project specification, interfacing with a provided database, creation of a shopping cart, creation of an order form, and form validation. It is hosted by Yahoo on the domain webweavin.com that I own. The link below will open in a new window.</p>
+				<p class="lead">This project included a logo design, site design, project specification, interfacing with a provided database, creation of a shopping cart, creation of an order form, and form validation. It is hosted by Yahoo on the domain webweavin.com that I own. The Lugnuts site was not designed responsively, thus it is best viewed on a desktop. The link below will open in a new window.</p>
 				<button id="lugnuts" type="button" class="btn btn-primary btn-block">Lugnut Automotive  (www.webweavin.com)</button>
 			</div>
 		</div>
@@ -224,15 +227,15 @@
 						<div class="col-xs-7 col-md-4">
 							<span><em>Websites</em></span>
 							<ul style="list-style-position: inside;">
-								<li>GitHubRon.github.io</li>
-								<li>www.webweavin.com</li>
+								<li>http://githubron.github.io</li>
+								<li>http://www.webweavin.com</li>
 							</ul>
 						</div>
 						<div class="col-xs-7 col-xs-offset-4 col-md-5 col-sm-offset-0">
 							<span><em>Treehouse</em></span>
 							<ul style="list-style-position: inside;">
-								<li>6,446 points</li>
-								<li>80 Badges</li>
+								<li>8,590 points</li>
+								<li>110 Badges</li>
 							</ul>
 						</div>
 					</div><br/><!--END ePortfolio ROW-->
@@ -285,7 +288,7 @@
 						<div class="col-xs-7 col-xs-offset-4 col-md-4 col-sm-offset-3">
 							<span><em>General</em></span>
 							<ul style="list-style-position: inside;">
-								<li>Photoshop</li>
+								<li>Photoshop Elements</li>
 								<li>Microsoft Office Suite</li>
 								<li>Typing</li>
 							</ul>
@@ -373,15 +376,15 @@
 						<div class="col-xs-4 col-md-4">
 							<span><em>Websites</em></span>
 							<ul style="list-style-position: inside;">
-								<li>GitHubRon.github.io</li>
-								<li>www.webweavin.com</li>
+								<li>http://githubron.github.io</li>
+								<li>http://www.webweavin.com</li>
 							</ul>
 						</div>
 						<div class="col-xs-5 col-xs-offset-0 col-md-5 col-sm-offset-0">
 							<span><em>Treehouse</em></span>
 							<ul style="list-style-position: inside;">
-								<li>6,446 points</li>
-								<li>80 Badges</li>
+								<li>8,590 points</li>
+								<li>110 Badges</li>
 							</ul>
 						</div>
 					</div><br/><!--END ePortfolio ROW-->
@@ -434,7 +437,7 @@
 						<div class="col-xs-4 col-xs-offset-3 col-md-4 col-sm-offset-3">
 							<span><em>General</em></span>
 							<ul style="list-style-position: inside;">
-								<li>Photoshop</li>
+								<li>Photoshop Elements</li>
 								<li>Microsoft Office Suite</li>
 								<li>Typing</li>
 							</ul>
@@ -486,17 +489,18 @@
 			<div class="commonDiv">
 			<h2 class="purpleHeader">Site Details</h2>
 					<ol class="lead">
-						<li>Bootstrap 3 is used for the navigation bar.</li>	
-						<li>Javascript is used to create the clock function.</li>	
-						<li>An external font alarmClock.ttf is used the clock display.</li>	
-						<li>JQuery slider widget is implemented.</li>	
+						<li>Bootstrap 3 was used for the navigation bar.</li>	
+						<li>First name personalization is implemented with HTML5 localStorage & jQuery.</li>	
+						<li>Javascript was used to create the clock function.</li>	
+						<li>An external font alarmClock.ttf is used in the clock display.</li>	
+						<li>The slider is a jQuery widget .</li>	
 						<li>The slider value defaults to 50 and adjusts the opacity of the clock display.</li>	
-						<li>Bootstrap grid is used for responsive design structure.</li>	
-						<li>JQuery is used to "stick" navbar at top for all devices.</li>	
-						<li>JQuery code re-collapses expanded menu on mobile device after a link is clicked.</li>	
+						<li>The Bootstrap 3 grid is used for the responsive design structure.</li>	
+						<li>JQuery coding "sticks" the navbar at the top for all devices.</li>	
+						<li>JQuery code re-collapses the expanded menu on mobile device after a link is clicked.</li>	
 						<li>JQuery is used to correct the link position for desktop viewing. Compensation is made for the desktop toolbar.</li>	
-						<li>Print button prints the Resume only using @media rules.</li>	
-						<li>Bootstrap components are used throughout, such as buttons, panels, glyphicons, carousel, and the "scrollspy".</li>	
+						<li>The print button prints the r&eacute;sum&eacute; only using @media rules.</li>	
+						<li>Bootstrap 3 components are used throughout, such as buttons, panels, glyphicons, carousel, and the "scrollspy".</li>	
 					</ol>
 			</div>
 		</div>
@@ -665,6 +669,9 @@
 	</div><!--END Chess content ROW-->
 </div><!--END Web page CONTAINER DIV-->
 <div class="container-fluid printHide">
+  <div class="row text-center">
+    <span id="readerThanks"></span>
+  </div>
 	<div class="row contactFooter"><!--START Contact/Footer ROW-->
 		<div class="col-xs-12 text-center" id="linkContact">
 			<h2>Contact Info</h2>
