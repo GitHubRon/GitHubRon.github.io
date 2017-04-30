@@ -123,7 +123,7 @@ jQuery(document).ready(function ($) {
                 var item = $(targetId);
                 // Hardcoding at offset -149 to make up for browser differences. 
                 // on desktop, not on mobile
-                if (diff < 50) {
+                if ($(window).width() < 1100) {
                 var scrollAmount = ((item.offset().top) - (screenHeight - windowHeight + navHeight));
                 } else {
                    var scrollAmount = item.offset().top - 149;
