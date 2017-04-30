@@ -106,6 +106,10 @@ jQuery(document).ready(function ($) {
             var screenHeight = screen.height;
             var diff = screenHeight - windowHeight;
             var navHeight = $("#addedNav").outerHeight();
+            console.log(navHeight + "navheight");
+            console.log(windowHeight + " windowheight");
+            console.log(screenHeight + " screenheight");
+            
             // The code below is for ipads
             if (diff < 50) {
                 navHeight = $("#addedNav").outerHeight(true);
@@ -117,7 +121,13 @@ jQuery(document).ready(function ($) {
             navItems.each(function () {
                 var targetId = $(this).attr("href");
                 var item = $(targetId);
+                // Hardcoding at offset -149 to make up for browser differences. 
+                // on desktop, not on mobile
+                if (diff < 50) {
                 var scrollAmount = ((item.offset().top) - (screenHeight - windowHeight + navHeight));
+                } else {
+                   var scrollAmount = item.offset().top - 149;
+                }
                 $(this).on("click", function (event) {
                     event.preventDefault();
                     window.scrollTo(0, scrollAmount);
