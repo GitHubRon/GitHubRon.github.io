@@ -160,7 +160,7 @@ img {
 /* Note: font sizes need to be larger due to bootstrap container width *****/
 @media print {
 	.myName {
-		font-size: 13pt;
+		font-size: 20pt;
 	}
 
 	.printHide {
@@ -170,7 +170,7 @@ img {
 	.resume {
 		font-family: Garamond; 
 		/*font-size: 15pt;*/
-    font-size: 10pt;
+    font-size: 15pt;
 	}
 }
 
