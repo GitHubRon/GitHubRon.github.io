@@ -155,6 +155,34 @@ img {
 		.printResume {
 		display: none;
 	}
+
+    .tooltiptext {
+    visibility: hidden;
+    background-color: #FFFF00;
+    border: solid black 2px;
+    border-radius: 10px;
+    position: relative;
+    top: -35px;
+    left: 40px;
+    text-align: center;
+    width: 40px;
+  }
+
+    .tooltiptext::after {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      right: 100%; /* To the left of the tooltip */
+      margin-top: -7px;
+      border-width: 7px;
+      border-style: solid;
+      border-color: transparent black transparent transparent;
+    }
+
+    #printResume:hover + .tooltiptext {
+      visibility: visible;
+    }
+
 }
 
 /* Note: font sizes need to be larger due to bootstrap container width *****/
